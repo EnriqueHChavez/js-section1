@@ -4,12 +4,15 @@ let pokemonList = [
     {pokemonName: 'Metagross', height: 1.6, type:[ 'pyschic', 'steel'], evolution: 'Metang'}
 ];
 
-let pokemonNames = [ 'Onix ',  ' Infernape ',  ' Metagross ' ];
-let pokemonHeights = [8.8, 1.2, 1.6];
-for (let i = 0; i < pokemonNames.length ; i++ ){
-    document.write(pokemonNames[i] + 'Height:' + pokemonHeights[i]);
-
-    if (pokemonHeights > 1.5) {
-        document.write(' Wow, thats big !');
+for (let i = 0; i < pokemonList.length; i++) {
+    document.write(
+      pokemonList[i].pokemonName + " (Height: " + pokemonList[i].height + ")"
+    );
+  
+    if (pokemonList[i].height > 1.5) {
+      document.write(" - Wow, that's big !" + "</br>" + "</br>");
+    } else {
+      document.write("</br>" + "</br>");
     }
-}
+  }
+  
