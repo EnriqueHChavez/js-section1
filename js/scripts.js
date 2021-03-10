@@ -39,7 +39,13 @@ let pokemonRepository = (function () {
     };
 })();
 
-pokemonRepository.getAll(); 
+
+pokemonRepository.getAll().forEach(function(pokemon) {
+  document.write(  pokemon.pokemonName + " (Height: " + pokemon.height + ") " + "</br>" ); 
+  
+  
+});
+//pokemonRepository.getAll(); 
 // the list of Pokemon should be displayed exactly how it was before, the only thing that will be different is your code
 
 
