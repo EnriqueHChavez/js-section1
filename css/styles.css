@@ -15,3 +15,18 @@
   color: black;
   border: 2px solid #4caf50;
 }
+
+html, 
+body {
+  font-family: Arial, sans-serif;
+}
+
+css
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  /* CSS for modal container - add your own desired CSS styles here */
+  display: block;
+}

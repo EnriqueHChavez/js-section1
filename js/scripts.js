@@ -1,4 +1,7 @@
-let pokemonRepository = (function () {
+
+
+
+ let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
@@ -67,20 +70,35 @@ let pokemonRepository = (function () {
       console.error(e);
     });
   }
-  function showDetails(item) {
+
+
+
+
+function showDetails(item) {
     pokemonRepository.loadDetails(item).then(function() {
-      console.log(item);
+      pokemonRepository.showModal(item);
     });
+    
   }
 
-  return {
+
+
+function showModal(pokemon) {
+var div = document.createElement("div");
+document.getElementById("modal-container").appendChild(div);
+}
+
+
+
+return {
     add: add,
     getAll: getAll,
     addListItem : addListItem,
     loadList: loadList,
     
     loadDetails: loadDetails,
-    showDetails: showDetails
+    showDetails: showDetails,
+    showModal : showModal
   };
 })();
      
@@ -96,8 +114,6 @@ pokemonRepository.getAll().forEach(function(pokemon){
 // the list of Pokemon should be displayed exactly how it was before, the only thing that will be different is your code
 
 
-
- 
 
 
 
